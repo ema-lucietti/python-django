@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}Inicio - Sistema de Autores Famosos{% endblock titulo %}
+
+{% block contenido %}
+<div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+        <h1 class="my-4">Sistema de Autores Famosos</h1>
+        <img src="{% static '/img/django-python-logo.png'%}" alt=" Logo del proyecto" width="90px">
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Sobre el Proyecto</h2>
+                <p class="card-text">
+                    esta aplicacion nos permite registrar y consultar información sobre autores famosos y sus frases célebres.
+                    este proyecto integrador es para demostrar las habilidades en Django y Python.
+                </p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">sobre mi</h2>
+                <p class="card-text">
+                    Mi nombre es Emanuel Lucietti. Soy desarrollador full stack.
+                    Este proyecto en python Django, forma parte de mi portafolio de aplicaciones web.
+                </p>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <a href="{% url 'autor_list' %}" class="btn btn-primary btn-lg">Ver Autores</a>
+        </div>
+    </div>
+</div>
+{% endblock contenido%}
